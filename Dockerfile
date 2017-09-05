@@ -37,7 +37,8 @@ RUN sed -i -e 's/memory_limit = 512M/memory_limit = -1/g' /etc/php/7.1/apache2/p
       && echo "xdebug.remote_port=9000" >> /etc/php/7.1/mods-available/xdebug.ini \
       && echo "xdebug.remote_handler=dbgp" >> /etc/php/7.1/mods-available/xdebug.ini \
       && echo "xdebug.remote_connect_back=1" >> /etc/php/7.1/mods-available/xdebug.ini \
-      && echo "opcache.enable_cli=1" >> /etc/php/7.1/mods-available/opcache.ini \
+# not activating opcache for cli - incompatible to composer
+#      && echo "opcache.enable_cli=1" >> /etc/php/7.1/mods-available/opcache.ini \
       && echo "opcache.memory_consumption=256" >> /etc/php/7.1/mods-available/opcache.ini \
       && echo "opcache.file_cache=/tmp/opcache" >> /etc/php/7.1/mods-available/opcache.ini \
       && mkdir /tmp/opcache
