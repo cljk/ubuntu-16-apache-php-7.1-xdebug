@@ -1,3 +1,6 @@
+```
+docker pull vgbpowertech/ubuntu-16-apache-php-7.1-xdebug
+```
 
 Based on
 * https://github.com/1and1internet/ubuntu-16-apache-php-7.1
