@@ -42,3 +42,5 @@ RUN sed -i -e 's/memory_limit = 512M/memory_limit = -1/g' /etc/php/7.1/apache2/p
       && echo "opcache.memory_consumption=256" >> /etc/php/7.1/mods-available/opcache.ini \
       && echo "opcache.file_cache=/tmp/opcache" >> /etc/php/7.1/mods-available/opcache.ini \
       && mkdir /tmp/opcache
+
+RUN chmod 777 /tmp/opcache
