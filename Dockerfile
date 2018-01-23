@@ -15,10 +15,10 @@ FROM 1and1internet/ubuntu-16-apache-php-7.1
 RUN a2enmod rewrite
 
 
-RUN apt-get update && apt-get install \
+RUN apt-get update && apt-get upgrade -y && apt-get install \
   --allow-unauthenticated -y \
-  php-mbstring php-gd php-xml php-mcrypt php-curl php-intl php-zip php-soap \
-  php-xdebug php-tidy \
+  php7.1-mbstring php7.1-gd php7.1-xml php7.1-mcrypt php7.1-curl php7.1-intl php7.1-zip php7.1-soap \
+  php7.1-xdebug php7.1-tidy \
   build-essential nodejs supervisor \
   git subversion \
   htop mc iputils-ping
